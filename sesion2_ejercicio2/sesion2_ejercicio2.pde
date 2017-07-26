@@ -1,18 +1,18 @@
 /*
 Sesión 2 ejercicio 2
  */
-//Creamos los objetos de las dos imágenes
+//Create the objects of the two images
 PImage fondo;
 PImage personaje;
 void setup() {
   size(600, 400);
-  //Cargamos las imágenes a nuestro programa
+  //Load the images to the sketch
   fondo=loadImage("forest.png");
   personaje=loadImage("worm.png");
 }
 void draw() {
-  //Pintamos primero el fondo
+  //Create the background first
   image(fondo, 0, 0);
-  //Ahora el personaje que se moverá en el eje X con la posición del ratón
+  //Now the character will move along the X-axis with the mouse position
   image(personaje, mouseX, 300, 100, 100);
 }
