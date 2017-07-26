@@ -13,18 +13,18 @@ void setup() {
   personaje=loadImage("worm.png");
 }
 void draw() {
-  //Pintamos primero el fondo
+  //Create the background first
   image(fondo, 0, 0);
-  //Ahora el personaje que se moverá en el eje X con la posición del ratón
+  //Now the character will move along the X-axis with the mouse position
   image(personaje, posX, 300, 100, 100);
 }
-//Sobreescribimos la función keyPressed
+//Overwrite the keyPressed function
 void keyPressed() {
   //Si se presiona la 'a' el personaje irá a la izquierda
   if (key=='a') {
     posX=posX-1;
   }
-  //Si se presiona la 'a' el personaje irá a la derecha
+   //If 'd' key is pressed, the character will go right
   if (key=='d') {
     posX=posX+1;
   }
