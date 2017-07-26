@@ -1,10 +1,10 @@
 /*
 Sesión 1 Ejercicio 4
  */
-//Variables de posición
+//Position Variables
 int posX=100;
 int posY=100;
-//variables de dirección
+//Direction Variables
 int dirX=1;
 int dirY=1;
 void setup() {
@@ -12,7 +12,7 @@ void setup() {
 }
 void draw() {
   background(222);
-  //Cálculo para el eje X
+  //X-axis calculation
   posX=posX+dirX;
   if (posX>width) {
     dirX=-1;
@@ -20,7 +20,7 @@ void draw() {
   if (posX<0) {
     dirX=1;
   }
-  //Cálculo para el eje Y
+  //Y-axis calculation
   posY=posY+dirY;
   if (posY>height) {
     dirY=-1;
@@ -28,6 +28,6 @@ void draw() {
   if (posY<0) {
     dirY=1;
   }
-  //Pintamos la primitiva primaria
+  //Draw shape primitive
   ellipse(posX, posY, 30, 30);
 }
