@@ -1,26 +1,26 @@
 /*
-Sesión 2 ejercicio 3
+Session 2 Exercise 3
  */
-//Creamos los objetos de las dos imágenes
-PImage fondo;
-PImage personaje;
-//Creamos una variable que controlará la posición en X
+ //Create the objects for the two images
+PImage background;
+PImage character;
+//Create a variable that will control the X position
 int posX=100;
 void setup() {
   size(600, 400);
-  //Cargamos las imágenes a nuestro programa
-  fondo=loadImage("forest.png");
-  personaje=loadImage("worm.png");
+  //Load the images to the sketch
+  background=loadImage("forest.png");
+  character=loadImage("worm.png");
 }
 void draw() {
   //Create the background first
-  image(fondo, 0, 0);
+  image(background, 0, 0);
   //Now the character will move along the X-axis with the mouse position
-  image(personaje, posX, 300, 100, 100);
+  image(character, posX, 300, 100, 100);
 }
 //Overwrite the keyPressed function
 void keyPressed() {
-  //Si se presiona la 'a' el personaje irá a la izquierda
+  //If 'a' key is pressed, the character will go left
   if (key=='a') {
     posX=posX-1;
   }

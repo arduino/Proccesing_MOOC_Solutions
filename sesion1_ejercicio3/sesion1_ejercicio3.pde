@@ -6,6 +6,6 @@ void setup() {
 }
 void draw() {
   background(222);
-  //Shape primitive that moves according to mouse coordinates 
+  //Draw an ellipse that moves according to "X" and "Y" mouse coordinates 
   ellipse(mouseX, mouseY, 30, 30);
 }

@@ -1,5 +1,5 @@
 /*
-Sesión 1 Ejercicio 4
+Session 1 Exercise 4
  */
 //Position Variables
 int posX=100;
@@ -28,6 +28,6 @@ void draw() {
   if (posY<0) {
     dirY=1;
   }
-  //Draw shape primitive
+  //Draw the primitive shape
   ellipse(posX, posY, 30, 30);
 }

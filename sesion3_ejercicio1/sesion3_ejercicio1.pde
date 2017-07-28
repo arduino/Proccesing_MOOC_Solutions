@@ -1,34 +1,33 @@
 /*
-Sesión 3 Ejercicio 1
+Session 3 Exercise 1
  */
-//Importamos la librería de video
+//Import video library
 import processing.video.*;
-//Creamos el objeto de la captura
+//Create the object for the capture
 Capture cam;
-//Creamos un variable de tipo String en la cual vamos a grabar la información 
-//de la hora, los minutos y los segundos
+//Create a String variable to record the hour, minutes and seconds data
 String tiempo;
 void setup() {
   size(640, 480);
-  //Imprimimos la lista de las cámaras disponibles
+  //Print the list of cameras availables
   String[] camaras= Capture.list();
   println(camaras);
-  //Definimos e inicializamos la captura
+  //Define and start capture
   cam=new Capture(this, camaras[0]);
   cam.start();
-  //Definimos el tamaño del texto
+  //Define text size
   textSize(38);
 }
 void draw() {
-  //Si hay una nueva captura disponible, leala
+  //If there is a new capture available, read it
   if (cam.available()==true) {
     cam.read();
   }
-  //Pintamos la imagen del la cámara
+  //Create the camera image
   image(cam, 0, 0);
-  //Encadenamos la información usando +
-  //Usamos la función str para convertir números en cadenas de caracteres
+  //Link time values using +
+  //Use str to convert the variables into a string 
   tiempo=str(hour())+":"+str(minute())+":"+str(second());
-  //Pintamos el texto
+  //Create the text
   text(tiempo, 10, 50);
 }

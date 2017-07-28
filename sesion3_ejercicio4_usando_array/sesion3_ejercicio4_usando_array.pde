@@ -1,18 +1,18 @@
 /*
-Sesion 3 Ejercicio 4
- Usando array
+Session 3 Exercise 4
+ Using arrays
  */
-//Importamos la librería de sonido
+//Import sound library
 import processing.sound.*;
-//Creamos el objeto para el dispositivo de audio
+//Create the object for the audio device
 AudioDevice dispositivo;
-//Creamos el array de los archivos de audio
+//Create the array of the audio files
 SoundFile[] sonidos;
 void setup() {
   size(400, 400);
-  //Definimos el dispositivo de audio
+  //Define the audio device
   dispositivo=new AudioDevice(this, 48000, 32);
-  //Definimos el array y cargamos los archivos de audio al programa
+  //Define the array and load the audio file to the sketch
   sonidos=new SoundFile[8];
   for (int i=0; i<8; i++) {
     sonidos[i]=new SoundFile(this, i+".mp3");
@@ -20,9 +20,9 @@ void setup() {
 }
 void draw() {
 }
-//Sobre escribimos la función keyPressed de Processing
+//Overwrite Processing keyPressed function
 void keyPressed() {
-  //Dependiendo de la tecla que se presione un archivo distinto será reproducido
+  //Depending on the pressed key a different file will be played
   switch(key) {
   case 'a':
     sonidos[0].play();

@@ -2,7 +2,7 @@
 Session 1 Exercise 2
  */
 
-//Create the sketch window
+//Define the width and height of the canvas
 size(600, 400);
 //Define line stroke
 strokeWeight(5);

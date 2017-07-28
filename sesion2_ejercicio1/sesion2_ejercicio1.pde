@@ -1,7 +1,7 @@
 /*
 Session 2 exercise 1
 */
-//Create the objects of the two images
+//Create the objects for the two images
 PImage img1;
 PImage img2;
 void setup(){
