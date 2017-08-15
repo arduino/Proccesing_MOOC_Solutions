@@ -1,25 +1,25 @@
 /*
-Sesión 3 Ejercicio 4
-Un solo archivo
+Session 3 Exercise 4
+One file
 */
-//Importamos la librería de sonido
+//Import sound library
 import processing.sound.*;
-//Creamos el objeto para el dispositivo de audio
+//Create the object for the audio device
 AudioDevice dispositivo;
-//Creamos el objeto para el archivo de audio
+//Create the object for the audio file
 SoundFile sonido;
 void setup() {
   size(400, 400);
-  //Definimos el dispositivo de audio
+  //Define the audio device
   dispositivo=new AudioDevice(this, 48000, 32);
-  //Cargamos el archivo de audio
+  //Load the audio file
   sonido=new SoundFile(this, "c.mp3");
 }
 void draw() {
 }
-//Sobre escribimos la función keyPressed de Processing
+//Overwrite Processing keyPressed function 
 void keyPressed() {
-  //Dependiendo de la tecla que se presione el pitch de archivo cambiará
+  //Depending on the pressed key the file pitch will change
   switch(key) {
   case 'a':
     sonido.play(1, 1);

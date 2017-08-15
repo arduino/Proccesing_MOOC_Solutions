@@ -1,20 +1,19 @@
 /*
-Sesión 2 ejercicio 4
+Session 2 exercise 4
 Simple
 */
-//Creamos una variable de tipo String donde guardaremos los valores
-//de la hora, los minutos y los segundos
-String tiempo;
+//Create a String variable to store the hour, minute and second values
+String time;
 void setup(){
   size(600,400);
-  //Definimos el tamaño del texto
+  //Define the text size
   textSize(38);
 }
 void draw(){
   background(222);
-  //Encadenamos los valores del tiempo usando +
-  //Además usamos str para convertir variables en cadenas de caracteres
-  tiempo=str(hour())+':'+str(minute())+':'+str(second());
-  //Pintamos el texto en la pantalla
-  text(tiempo,220,200);
+  //Link time values using +
+  //Also use str to convert the variables into a string 
+  time=str(hour())+':'+str(minute())+':'+str(second());
+  //Create the text on the screen
+  text(time,220,200);
 }

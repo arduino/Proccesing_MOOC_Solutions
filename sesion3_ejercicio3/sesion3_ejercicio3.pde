@@ -1,33 +1,33 @@
 /*
-Sesión 3 Ejercicio 3
+Session 3 Exercise 3
 */
-//Importamos la libraría de sonido
+//Import sound library
 import processing.sound.*;
-//Creamos el objeto para el archivo de sonido
+//Create the object for the sound file
 SoundFile sonido;
-//Creamos una variable de tipo string que guardará la posición del ratón
+//Create a String variable to store the mouse position
 String posRaton;
 void setup(){
   size(600,400);
-  //Cargamos el archivo de sonido al programa
+  //Load the sound file to the sketch
   sonido=new SoundFile(this,"groove.mp3");
-  //Definimos el archivo de sonido como loop
+  //Define the sound file as a loop
   sonido.loop();
-  //Definimos el tamaño del texto
+  //Define the text size
   textSize(38);
 }
 void draw(){
   background(255);  
-  //Filtro 1: velocidad del sonido
+  //Filter 1: sound speed
   sonido.rate(map(mouseX,0,600,0.25,4.0));
-  //Filtro 2: amplitud del sonido
+  //Filtro 2: sound amplitude
   sonido.amp(map(mouseY,0,400,0.2,1));
-  //Filtro 3: definimos si el sonido proviene de la izquierda o de la derecha
+  //Filter 3: define if the sound comes from the left or right
   sonido.pan(map(mouseY,0,400,-1,1));
-  //Encadenamos las posiones del ratón usando +
-  //Usamos str para convertir números en cadenas de caracteres
+  //Link the mouse positions using +
+  //Use str to convert numbers into strings
   posRaton="X: "+str(mouseX)+" - Y: "+str(mouseY);
-  //Pintamos el texto
+  //Draw the text
   fill(0);
   text(posRaton,10,200);
 }

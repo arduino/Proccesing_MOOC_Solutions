@@ -1,42 +1,41 @@
 /*
-Sesión 3 Ejercicio 2
+Session 3 Exercise 2
  */
-//Importamos la librería de video
+//Import video library
 import processing.video.*;
-//Creamos el objeto de la captura
+//Create the object for the capture
 Capture cam;
-//Creamos un variable de tipo String en la cual vamos a grabar la información 
-//de la hora, los minutos y los segundos
-String tiempo;
+//Create a String variable to record the hour, minutes and seconds data
+String time;
 void setup() {
   size(640, 480);
-  //Imprimimos la lista de las cámaras disponibles
+  //Print the list of cameras availables
   String[] camaras= Capture.list();
   println(camaras);
-  //Definimos e inicializamos la captura
+  //Define and start capture
   cam=new Capture(this, camaras[0]);
   cam.start();
-  //Definimos el tamaño del texto
+  //Define the text size
   textSize(38);
 }
 void draw() {
-  //Si hay una nueva captura disponible, leala
+  //If there is a new capture available, read it
   if (cam.available()==true) {
     cam.read();
   }
-  //Pintamos la imagen del la cámara
+  //Draw the camera image
   image(cam, 0, 0);
-  //Encadenamos la información usando +
-  //Usamos la función str para convertir números en cadenas de caracteres
-  tiempo=str(hour())+":"+str(minute())+":"+str(second());
-  //Pintamos el texto
-  text(tiempo, 10, 50);
+  //Link the information using +
+  //Use the str function to convert numbers into strings
+  time=str(hour())+":"+str(minute())+":"+str(second());
+  //Create the text
+  text(time, 10, 50);
 }
-//Sobre escribimos la función keyPressed de Processing
+//Overwrite Processing keyPressed function
 void keyPressed() {
-  //Si se presiona la tecla 'r' se guardará una imágen en la carpeta del sketch
-  //con el tiempo como nombre en formato png
+  //If 'r' key is pressed an image will be saved in the sketch folder
+  //with the name "time" in png format
   if (key=='r') {
-    saveFrame(tiempo+".png");
+    saveFrame(time+".png");
   }
 }
